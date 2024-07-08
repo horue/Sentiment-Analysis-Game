@@ -16,6 +16,7 @@ loop do
     score += 1
     puts "Positive Sentiment! Score: #{score}"
   elsif sentiment == :negative then
+    score -= 1
     puts "Negative Sentiment... Score: #{score}"
   end
 end
