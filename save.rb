@@ -3,6 +3,10 @@ require 'inifile'
 $save = IniFile.load('save.ini')
 
 
+def load_game
+  current = $save['current']['status']
+end
+
 def save_game(current_level)
   $save['current']['status'] = current_level.to_s
   $save.save
@@ -14,6 +18,7 @@ def save_level(level, score)
 end
 
 if __FILE__ == $0
-  save_game(3)
+  puts load_game
+  save_game('3b')
   save_level(1, 0.423)
 end
