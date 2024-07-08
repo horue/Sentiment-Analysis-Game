@@ -4,7 +4,7 @@ analyzer = Sentimental.new
 analyzer.load_defaults
 
 
-score = 0
+score = 1
 
 
 loop do
@@ -18,5 +18,11 @@ loop do
   elsif sentiment == :negative then
     score -= 1
     puts "Negative Sentiment... Score: #{score}"
+  end
+
+  if score <1 then
+    puts "It looks like you are not ready for this."
+    puts "See you later."
+  break
   end
 end
