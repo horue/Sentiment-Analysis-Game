@@ -16,11 +16,11 @@ def game
 
     if sentiment == :positive then
       score += sentiment_score
-      save_game(1, score)
+      save_level(1, score)
       puts "Positive Sentiment! Score: #{score}"
     elsif sentiment == :negative then
       score += sentiment_score
-      save_game(1, score)
+      save_level(1, score)
       puts "Negative Sentiment... Score: #{score}"
     end
 
