@@ -4,6 +4,7 @@ require_relative 'save'
 
 
 def main
+    system('cls')
     prompt = TTY::Prompt.new
     choices = [
     {name: 'New Game', value: 1},
