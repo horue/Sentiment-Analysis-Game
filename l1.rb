@@ -1,14 +1,14 @@
 require 'Sentimental'
 require_relative 'save'
 
-analyzer = Sentimental.new
-analyzer.load_defaults
+$analyzer = Sentimental.new
+$analyzer.load_defaults
 
 
-score = 0.1
+$score = 0.1
 
 
-questions = [
+$questions = [
   'Do you think humanity would win a war against machines?',
   'How do you feel about the rapid advancements in AI technology?',
   'Do you believe AI could eventually surpass human intelligence?',
@@ -27,20 +27,26 @@ questions = [
   'Do you think AI could pose a threat to humanity in the long run?'
 ]
 
+def level
+  save_game(1)
+  for question in $questions do
+    print question
+    message = gets
+    sentiment = $analyzer.sentiment message
+    sentiment_score = $analyzer.score message
 
-for a in questions do
-  print a
-  message = gets
-  sentiment = analyzer.sentiment message
-  sentiment_score = analyzer.score message
-
-  if sentiment == :positive then
-    score += sentiment_score
-    save_level(1, score)
-    puts "Positive Sentiment! Score: #{score}"
-  elsif sentiment == :negative then
-    score += sentiment_score
-    save_level(1, score)
-    puts "Negative Sentiment... Score: #{score}"
+    if sentiment == :positive then
+      $score += sentiment_score
+      save_level(1, $score)
+      puts "Positive Sentiment! Score: #{$score}"
+    elsif sentiment == :negative then
+      $score += sentiment_score
+      save_level(1, $score)
+      puts "Negative Sentiment... Score: #{$score}"
+    end
   end
+end
+
+if __FILE__ == $0
+  level
 end
