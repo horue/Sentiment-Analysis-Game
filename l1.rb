@@ -9,9 +9,22 @@ score = 0.1
 
 
 questions = [
-  'Do you think humanity would win a war against machines? ',
-  'a',
-  'b'
+  'Do you think humanity would win a war against machines?',
+  'How do you feel about the rapid advancements in AI technology?',
+  'Do you believe AI could eventually surpass human intelligence?',
+  'Are you worried about the potential misuse of AI in the future?',
+  'How do you feel about AI taking over jobs traditionally done by humans?',
+  'Do you think AI could help solve major global issues, like climate change?',
+  'Are you concerned about privacy with the increase in AI surveillance?',
+  'How do you feel about AI being used in healthcare and medical diagnosis?',
+  'Do you believe AI can truly understand human emotions?',
+  'How do you feel about the idea of AI companions or friends?',
+  'Are you optimistic about the future with AI integration in daily life?',
+  'Do you think AI will create more opportunities or more challenges for society?',
+  'How do you feel about AI being used in creative fields like art and music?',
+  'Do you trust AI systems to make important decisions, like in self-driving cars?',
+  'How do you feel about the ethical implications of AI development?',
+  'Do you think AI could pose a threat to humanity in the long run?'
 ]
 
 
