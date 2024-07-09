@@ -17,6 +17,12 @@ def save_level(level, score)
   $save.save
 end
 
+def save_answer(question, answer)
+  answer = IniFile.load('answer.ini')
+  answer['answerslog'][question.to_s] = answer.to_s
+  answer.save
+end
+
 if __FILE__ == $0
   puts load_game
   save_game('3b')
