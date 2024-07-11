@@ -1,5 +1,6 @@
 require 'tty-prompt'
 require_relative 'save'
+require_relative 'l1'
 
 
 
@@ -20,7 +21,7 @@ def main
     puts 'Starting a New Game...'
     when 2
     puts 'Continuing the game...'
-    puts load_game
+    puts load_game(level1)
     when 3
     puts 'Displaying help...'
     when 4
