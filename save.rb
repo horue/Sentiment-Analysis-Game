@@ -23,6 +23,10 @@ def save_answer(question, answer)
   answer.save
 end
 
+def next_level(level, def_)
+  def_
+end
+
 if __FILE__ == $0
   puts load_game
   save_game('3b')
