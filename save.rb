@@ -1,9 +1,10 @@
 require 'inifile'
+require_relative 'l1'
 
 $save = IniFile.load('save.ini')
 
 
-def load_game
+def load_game(level)
   current = $save['current']['status']
 end
 
