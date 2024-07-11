@@ -27,7 +27,7 @@ $questions = [
   'Do you think AI could pose a threat to humanity in the long run? '
 ]
 
-def level
+def level1
   save_game(1)
   for question in $questions do
     print question
