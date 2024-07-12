@@ -1,5 +1,6 @@
 require 'Sentimental'
 require_relative 'save'
+require_relative 'type'
 
 $analyzer = Sentimental.new
 $analyzer.load_defaults
@@ -9,10 +10,10 @@ $score = 0.1
 
 
 $questions = [
-  'Hello, I am Serena. Nice to meet you.'
-  'We are here today to star a new analysis system, and you will be helping us.'
-  'First of all, I would like to know your name.'
-  "Now, let's get started."
+  'Hello, I am Serena. Nice to meet you.',
+  'We are here today to star a new analysis system, and you will be helping us.',
+  'First of all, I would like to know your name.',
+  "Now, let's get started.",
   'Do you think humanity would win a war against machines? ',
   'How do you feel about the rapid advancements in AI technology? ',
   'Do you believe AI could eventually surpass human intelligence? ',
@@ -34,7 +35,7 @@ $questions = [
 def level1
   save_game(1)
   for question in $questions do
-    print question
+    putt(question)
     message = gets
     sentiment = $analyzer.sentiment message
     sentiment_score = $analyzer.score message
@@ -53,5 +54,5 @@ def level1
 end
 
 if __FILE__ == $0
-  level
+  level1
 end
