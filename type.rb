@@ -3,5 +3,5 @@ def putt(text, delay = 0.1)
     print char
     sleep(delay)
   end
-  puts
+  print
 end
