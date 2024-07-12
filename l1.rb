@@ -9,6 +9,10 @@ $score = 0.1
 
 
 $questions = [
+  'Hello, I am Serena. Nice to meet you.'
+  'We are here today to star a new analysis system, and you will be helping us.'
+  'First of all, I would like to know your name.'
+  "Now, let's get started."
   'Do you think humanity would win a war against machines? ',
   'How do you feel about the rapid advancements in AI technology? ',
   'Do you believe AI could eventually surpass human intelligence? ',
