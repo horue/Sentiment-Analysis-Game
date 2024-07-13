@@ -24,6 +24,13 @@ def save_answer(question, answer)
   answer.save
 end
 
+def new_game
+  $save['current']['status'] = 1
+  $save.save
+  level1()
+end
+
+
 def next_level(level, def_)
   def_
 end
