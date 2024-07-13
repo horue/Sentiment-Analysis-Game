@@ -19,6 +19,7 @@ def main
     case selected
     when 1
     puts 'Starting a New Game...'
+    puts new_game
     when 2
     puts 'Continuing the game...'
     puts load_game(level1)
