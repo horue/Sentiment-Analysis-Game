@@ -36,7 +36,7 @@ def main
         puts 'Exiting the game...'
         end
         when 2
-        main
+        main()
     end
 end
 
