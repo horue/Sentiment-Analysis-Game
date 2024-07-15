@@ -26,7 +26,17 @@ def main
     when 3
     puts 'Displaying help...'
     when 4
-    puts 'Exiting the game...'
+        yes_no = [
+            {name: 'Yes', value: 1},
+            {name: 'No', value: 2},
+        ]
+        yn = prompt.select('Are you sure you want do exit the game?', yes_no)
+        case yn
+        when 1
+        puts 'Exiting the game...'
+        end
+        when 2
+        main
     end
 end
 
